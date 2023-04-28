@@ -1,0 +1,40 @@
+{
+    "__comment": "A generic rotor that can be applied to any stirling engine heat source.",
+	"code": "stirlingenginerotor",
+	"class": "StirlingEngineRotor",
+	"entityClass": "Generic",
+	"entityBehaviors": [
+		{"name": "StirlingEngineRotor"}
+	],
+	"behaviors": [
+		{"name": "HorizontalOrientable"}
+	],
+	"attributes": {
+		"mechanicalPower": {
+			"renderer": "stirlingenginerotor"
+		}
+	},
+	"variantgroups": [
+		{ "code":"side", "loadFromProperties": "abstract/horizontalorientation" }
+	],
+	"creativeinventory": { },
+	"shapebytype": {
+		"*-north": { "base": "stirlingengine-static", "rotateY": 90 },
+		"*-east": { "base": "stirlingengine-static", "rotateY": 0 },
+		"*-south": { "base": "stirlingengine-static", "rotateY": 270 },
+		"*-west": { "base": "stirlingengine-static", "rotateY": 180 }
+	},
+	"blockmaterial": "Metal",
+	"sidesolid": {
+		"all": false
+	},
+	"sideopaque": {
+		"all": false
+	},
+	"drops": [],
+	"resistance": 3,
+	"lightAbsorption": 0,
+	"collisionSelectionBox": {
+		"x1": 0, "y1": 0, "z1": 0, "x2": 1, "y2": 1, "z2": 1
+	}
+}

@@ -1,0 +1,136 @@
+{
+	"code": "stirlingengineburner",
+	"class": "StirlingEngineBurner",
+	"entityClass": "StirlingEngineBurner",
+	"behaviors": [
+		{"name": "HorizontalOrientable"},
+		{"name": "Container"},
+		{"name": "Ignitable"},
+		{"name": "HeatSource"}
+	],
+	"variantgroups": [
+		{ "code":"burnstate", "states": ["extinct", "lit", "cold"] },
+		{ "code":"side", "loadFromProperties": "abstract/horizontalorientation" }
+	],
+	"creativeinventory": { "general": ["*-cold-north"], "mechanics": ["*-cold-north"] },
+	"__commented_shapebytype": {
+		"*-north": { "base": "block/stirlingage/stirlingengineburner-{burnstate}", "rotateY": 90 },
+		"*-east": { "base": "block/stirlingage/stirlingengineburner-{burnstate}", "rotateY": 0 },
+		"*-south": { "base": "block/stirlingage/stirlingengineburner-{burnstate}", "rotateY": 270 },
+		"*-west": { "base": "block/stirlingage/stirlingengineburner-{burnstate}", "rotateY": 180 }
+	},
+	"textures": {
+		"log": { "base": "game:block/wood/firepit/log" },
+		"ceramic": { "base": "game:block/clay/ceramic" },
+		"ember": { "base": "game:block/coal/ember" },
+		"ashes": { "base": "game:block/wood/firepit/ground" },
+		"fire": { "base": "game:block/wood/firepit/fire" },
+		"tinder": { "base": "game:block/hay/normal-side" }
+	},
+	"shape": { "base": "game:block/wood/firepit/{burnstate}-normal" },
+	"shapeinventory": { "base": "stirlingengine-whole" },
+	"lightHsvByType": {
+		"stirlingengineburner-extinct-north": [7, 7, 3],
+		"stirlingengineburner-extinct-east": [7, 7, 3],
+		"stirlingengineburner-extinct-south": [7, 7, 3],
+		"stirlingengineburner-extinct-west": [7, 7, 3],
+		"stirlingengineburner-lit-north": [7, 7, 16],
+		"stirlingengineburner-lit-east": [7, 7, 16],
+		"stirlingengineburner-lit-south": [7, 7, 16],
+		"stirlingengineburner-lit-west": [7, 7, 16]
+	},
+	"particlePropertiesByType": {
+		"stirlingengineburner-extinct-*": [
+			{
+				"hsvaColor": [{ "avg": 0, "var": 0 }, { "avg": 0, "var": 0 }, { "avg": 70, "var": 30 },  { "avg": 220, "var": 50 }],
+				"opacityEvolve": { "transform": "quadratic", "factor": -16 },
+				"gravityEffect": { "avg": 0, "var": 0 },
+				"posOffset": [ { "avg": 0, "var": 0.2 }, { "avg": -0.4, "var": 0 }, { "avg": 0, "var": 0.2 }],
+				"velocity": [ { "avg": 0, "var": 0.05 }, { "avg": 0.1, "var": 0.05 }, { "avg": 0, "var": 0.05 }],
+				"quantity": { "avg": 0.02 },
+				"size": { "avg": 0.3, "var": 0.05 },
+				"sizeEvolve": { "transform": "linear", "factor": 1.5 },
+				"particleModel": "Quad",
+				"windAffectednes": 0.7
+			}
+		],
+		"stirlingengineburner-lit-*": [
+			{
+				"__comment": "Ember cubicles",
+				"hsvaColor": [{ "avg": 30, "var": 20 }, { "avg": 255, "var": 50 }, { "avg": 255, "var": 50 },  { "avg": 255, "var": 0 }],
+				"gravityEffect": { "dist": "invexp", "avg": -0.1, "var": 0.4 },
+				"posOffset": [ { "avg": 0, "var": 0.2 }, { "avg": -0.4, "var": 0 }, { "avg": 0, "var": 0.2 }],
+				"velocity": [ { "avg": 0, "var": 0.15 }, { "avg": 0.5, "var": 0.1 }, { "avg": 0, "var": 0.15 }],
+				"quantity": { "avg": 0.015 },
+				"size": { "avg": 0.4, "var": 0 },
+				"sizeEvolve": { "transform": "quadratic", "factor": -0.7 },
+				"lifeLength": { "avg": 1.5 },
+				"vertexFlags": 128,
+				"windAffectednes": 0.2
+			},
+			{
+				"__comment": "Smoke quads",
+				"hsvaColor": [{ "avg": 0, "var": 0 }, { "avg": 0, "var": 0 }, { "avg": 70, "var": 30 },  { "avg": 220, "var": 50 }],
+				"opacityEvolve": { "transform": "linear", "factor": -255 },
+				"gravityEffect": { "avg": 0, "var": 0 },
+				"posOffset": [ { "avg": 0, "var": 0.2 }, { "avg": -0.4, "var": 0 }, { "avg": 0, "var": 0.2 }],
+				"velocity": [ { "avg": 0, "var": 0.025 }, { "avg": 0.2, "var": 0.05 }, { "avg": 0, "var": 0.025 }],
+				"quantity": { "avg": 0.08 },
+				"size": { "avg": 0.3, "var": 0.05 },
+				"sizeEvolve": { "transform": "linear", "factor": 1.5 },
+				"particleModel": "Quad",
+				"lifeLength": { "avg": 18 },
+				"selfPropelled": true,
+				"windAffectednes": 0.7
+			},
+			{
+				"__comment": "Fire quads",
+				"hsvaColor": [{ "avg": 20, "var": 20 }, { "avg": 255, "var": 50 }, { "avg": 255, "var": 50 },  { "avg": 255, "var": 0 }],
+				"opacityEvolve": { "transform": "quadratic", "factor": -16 },
+				"gravityEffect": { "avg": 0, "var": 0 },
+				"posOffset": [ { "avg": 0, "var": 0.1 }, { "avg": -0.4, "var": 0 }, { "avg": 0, "var": 0.1 }],
+				"velocity": [ { "avg": 0, "var": 0.1 }, { "avg": 0.125, "var": 0.05 }, { "avg": 0, "var": 0.1 }],
+				"quantity": { "avg": 0.5 },
+				"size": { "avg": 0.25, "var": 0.05 },
+				"lifeLength": { "avg": 0.5 },
+				"sizeEvolve": { "transform": "linear", "factor": 0.5 },
+				"particleModel": "Quad",
+				"vertexFlags": 128,
+				"windAffectednes": 0.7
+			}
+		]
+	},
+	"blockmaterial": "Metal",
+	"sidesolid": {
+		"all": false
+	},
+	"sideopaque": {
+		"all": false
+	},
+	"drops": [
+		{ "type": "block", "code": "stirlingage:stirlingengineburner-cold-north", "quantity": { "avg": 1 } }
+	],
+	"resistance": 3,
+	"lightAbsorption": 0,
+	"heldTpIdleAnimation": "holdbothhands",
+	"heldTpUseAnimation": "holdbothhands",
+	"guiTransform": {
+		"origin": { "x": 0.5, "y": 0.5, "z": 0.5 },
+		"translation": { "x": 0, "y": -15, "z": -0 },
+		"scale": 0.8
+	},
+	"tpHandTransform": {
+		"translation": { "x": -1.2, "y": -1, "z": -1 },
+		"scale": 0.5
+	},
+	"groundTransform": {
+		"translation": { "x": -0.08, "y": 0.04, "z": 0.2 },
+		"rotation": { "x": -37, "y": -44, "z": 21 },
+		"origin": { "x": 0.5, "y": 0.5, "z": 0.1 },
+		"scale": 2.9
+	},
+	"collisionSelectionBox": {
+		"x1": 0, "y1": 0, "z1": 0, "x2": 1, "y2": 1, "z2": 1
+	},
+	"renderpass": "OpaqueNoCull"
+}

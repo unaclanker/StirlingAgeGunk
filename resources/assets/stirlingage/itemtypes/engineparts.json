@@ -1,0 +1,107 @@
+{
+	"code": "engineparts",
+	"maxstacksize": 64,
+	"variantgroups": [
+		{ "code":"materialtype", "states": ["raw", "burned"] },
+		{ "code":"kind", "states": ["chamber", "workpiston", "displacerpiston"]}
+	],
+	"behaviorsByType": {
+		"*-chamber": [
+			{ "name": "GroundStorable", "properties": {
+				"layout": "SingleCenter",
+				"collisionbox": {
+					"x1": 0.03125, "y1": 0, "z1": 0.03125,
+					"x2": 0.96875, "y2": 1, "z2": 0.96875
+				},
+				"selectionbox": {
+					"x1": 0.03125, "y1": 0, "z1": 0.03125,
+					"x2": 0.96875, "y2": 1, "z2": 0.96875
+				}
+			}}
+		],
+		"*-displacerpiston": [
+			{ "name": "GroundStorable", "properties": {
+				"layout": "SingleCenter",
+				"collisionbox": {
+					"x1": 0.25, "y1": 0, "z1": 0.25,
+					"x2": 0.25, "y2": 0.9375, "z2": 0.75
+				},
+				"selectionbox": {
+					"x1": 0.25, "y1": 0, "z1": 0.25,
+					"x2": 0.75, "y2": 0.9375, "z2": 0.75
+				}
+			}}
+		],
+		"*-workpiston": [
+			{ "name": "GroundStorable", "properties": {
+				"layout": "SingleCenter",
+				"collisionbox": {
+					"x1": 0.1875, "y1": 0, "z1": 0.3125,
+					"x2": 0.8125, "y2": 0.5, "z2": 0.6875
+				},
+				"selectionbox": {
+					"x1": 0.1875, "y1": 0, "z1": 0.3125,
+					"x2": 0.8125, "y2": 0.5, "z2": 0.6875
+				}
+			}}
+		]
+	},
+	"combustiblePropsByType": {
+		"engineparts-raw-*": {
+			"meltingPoint": 650,
+			"meltingDuration": 45,
+			"smeltedRatio": 1,
+			"smeltingType": "fire",
+			"smeltedStack": { "type": "item", "code": "engineparts-burned-{kind}" },
+			"requiresContainer": false
+		}
+	},
+	"materialDensity": 2600,
+	"creativeinventory": { "general": ["*"], "construction": ["*"] },
+	"texturesByType": {
+		"*-raw-chamber": {  "all": { "base": "game:block/clay/fireclay" } },
+		"*-burned-chamber": {  "all": { "base": "game:block/clay/hardened/fire1" } },
+		"*-raw-*": {  "all": { "base": "game:block/clay/blueclay" } },
+		"*-burned-*": {  "all": { "base": "game:block/clay/ceramic" } }
+	},
+	"shape": { "base": "engineparts-{kind}" },
+	"heldTpIdleAnimation": "holdbothhands",
+	"heldTpUseAnimation": "holdbothhands",
+	"guiTransformByType": {
+		"*-chamber": {
+			"translation": { "x": 2, "y": 0, "z": 0 },
+			"rotation": { "x": 155, "y": 45, "z": 0 },
+			"origin": { "x": 0.5, "y": 0.5, "z": 0.5 },
+			"scale": 1.14
+		},
+		"*-workpiston": {
+			"translation": { "x": 2, "y": -9, "z": 0 },
+			"rotation": { "x": 155, "y": 45, "z": 0 },
+			"origin": { "x": 0.5, "y": 0.5, "z": 0.5 },
+			"scale": 1.35
+		},
+		"*-displacerpiston":{ 
+			"translation": { "x": 2, "y": -1, "z": 0 },
+			"rotation": { "x": 155, "y": 45, "z": 0 },
+			"origin": { "x": 0.5, "y": 0.5, "z": 0.5 },
+			"scale": 1.35
+		}
+	},
+	"tpHandTransform": {
+		"translation": { "x": -0.97, "y": -0.1, "z": -0.65 },
+		"rotation": { "x": -51, "y": 23, "z": -114 },
+		"origin": { "x": 0.5, "y": 0.125, "z": 0.5 },
+		"scale": 0.56
+	},
+	"fpHandTransform": {
+		"translation": { "x": -0.3, "y": 0, "z": 0.5 },
+		"rotation": { "x": 16, "y": -50, "z": 1 },
+		"origin": { "x": 0.5, "y": 0.125, "z": 0.5 }
+	},
+	"groundTransform": {
+		"translation": { "x": 0, "y": 0, "z": 0 },
+		"rotation": { "x": 0, "y": -45, "z": 0 },
+		"origin": { "x": 0.5, "y": 0, "z": 0.5 },
+		"scale": 2.2
+	}
+}

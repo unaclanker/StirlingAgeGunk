@@ -1,0 +1,12 @@
+{
+    "type": "code",
+    "modid": "stirlingage",
+    "name": "Stirling Age",
+    "authors": ["Solra Bizna <solra@bizna.name>", "Corfid Bizna"],
+    "description": "Adds a stirling engine that you can use to convert fuel into mechanical work.",
+    "version": "0.9.0",
+    "networkVersion": "0.9.0",
+    "dependencies": {
+        "game": "1.18.1"
+    }
+}

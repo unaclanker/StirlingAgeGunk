@@ -1,0 +1,11 @@
+{
+    "stirlingage:block-stirlingengineburner-*": "Stirling engine",
+    "stirlingage:block-stirlingenginesucker-*": "Stirling engine (geothermal)",
+    "stirlingage:block-stirlingenginerotor-*": "Stirling engine",
+    "stirlingage:item-engineparts-raw-chamber": "Raw stirling engine fluid chamber",
+    "stirlingage:item-engineparts-burned-chamber": "Stirling engine fluid chamber",
+    "stirlingage:item-engineparts-raw-workpiston": "Raw stirling engine working piston",
+    "stirlingage:item-engineparts-burned-workpiston": "Stirling engine working piston",
+    "stirlingage:item-engineparts-raw-displacerpiston": "Raw stirling engine displacer piston",
+    "stirlingage:item-engineparts-burned-displacerpiston": "Stirling engine displacer piston"
+}
