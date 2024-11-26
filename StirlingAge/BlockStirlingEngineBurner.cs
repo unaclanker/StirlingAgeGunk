@@ -79,6 +79,13 @@ public class BlockStirlingEngineBurner : BlockMPBase, IIgnitable {
         return ok;
     }
 
+    EnumIgniteState IIgnitable.OnTryIgniteStack(EntityAgent byEntity, BlockPos pos, ItemSlot slot, float secondsIgniting)
+    {
+        BlockEntityStirlingEngineBurner burner = api.World.BlockAccessor.GetBlockEntity(pos) as BlockEntityStirlingEngineBurner;
+        if (burner == null) return EnumIgniteState.NotIgnitable;
+        if (burner.IsBurning) return secondsIgniting > 2 ? EnumIgniteState.IgniteNow : EnumIgniteState.Ignitable;
+        return EnumIgniteState.NotIgnitable;
+    }
     public EnumIgniteState OnTryIgniteBlock(EntityAgent byEntity, BlockPos pos, float secondsIgniting) {
         BlockEntityStirlingEngineBurner burner = api.World.BlockAccessor.GetBlockEntity(pos) as BlockEntityStirlingEngineBurner;
         if (burner == null) return EnumIgniteState.NotIgnitable;
@@ -110,7 +117,7 @@ public class BlockStirlingEngineBurner : BlockMPBase, IIgnitable {
         {
             if (stack.Collectible.CombustibleProps != null && stack.Collectible.CombustibleProps.BurnTemperature > 0)
             {
-                ItemStackMoveOperation op = new ItemStackMoveOperation(world, EnumMouseButton.Button1, 0, EnumMergePriority.DirectMerge, 1);
+                ItemStackMoveOperation op = new ItemStackMoveOperation(world, EnumMouseButton.Left, 0, EnumMergePriority.DirectMerge, 1);
                 byPlayer.InventoryManager.ActiveHotbarSlot.TryPutInto(burner.fuelSlot, ref op);
                 if (op.MovedQuantity > 0)
                 {

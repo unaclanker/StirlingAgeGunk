@@ -2,14 +2,9 @@
   <!-- thank you, @copygirl! -->
   <PropertyGroup>
     <OutputType>Library</OutputType>
-    <RootNamespace>StirlingAge</RootNamespace>
-    <AssemblyName>StirlingAge</AssemblyName>
-    <TargetFramework>net48</TargetFramework>
+    <TargetFramework>net7.0</TargetFramework>
     <OutputPath>bin</OutputPath>
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>portable</DebugType>
   </PropertyGroup>
-  <!--<Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />-->
   <ItemGroup>
     <Reference Include="VintagestoryAPI">
       <HintPath>..\vintagestory\VintagestoryAPI.dll</HintPath>
@@ -25,10 +20,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\resources\**">
-      <Link>%(RecursiveDir)%(Filename)%(Extension)</Link>
+    <Content Include="..\resources\**">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    </Content>
   </ItemGroup>
   <Target Name="Package" AfterTargets="PostBuildEvent" Condition="'$(Configuration)' == 'Release'">
     <ZipDirectory DestinationFile="bin/$(TargetName).zip" SourceDirectory="$(TargetDir)" Overwrite="true" />
