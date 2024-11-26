@@ -1,0 +1,746 @@
+{
+    "editor": {},
+    "textureWidth": 16,
+    "textureHeight": 16,
+    "textureSizes": {},
+    "textures": {
+        "wood": "game:block/wood/planks/generic"
+    },
+    "elements": [
+        {
+            "name": "AxleCube1",
+            "from": [
+                0.0,
+                7.0,
+                6.0
+            ],
+            "to": [
+                1.01,
+                9.0,
+                10.0
+            ],
+            "rotationOrigin": [
+                0.0,
+                8.0,
+                8.0
+            ],
+            "faces": {
+                "north": {
+                    "texture": "#wood",
+                    "uv": [
+                        0.0,
+                        7.0,
+                        1.01,
+                        9.0
+                    ]
+                },
+                "south": {
+                    "texture": "#wood",
+                    "uv": [
+                        0.0,
+                        7.0,
+                        1.01,
+                        9.0
+                    ]
+                },
+                "east": {
+                    "texture": "#wood",
+                    "uv": [
+                        6.0,
+                        7.0,
+                        10.0,
+                        9.0
+                    ]
+                },
+                "west": {
+                    "texture": "#wood",
+                    "uv": [
+                        6.0,
+                        7.0,
+                        10.0,
+                        9.0
+                    ]
+                },
+                "up": {
+                    "texture": "#wood",
+                    "uv": [
+                        0.0,
+                        6.0,
+                        1.01,
+                        10.0
+                    ]
+                },
+                "down": {
+                    "texture": "#wood",
+                    "uv": [
+                        0.0,
+                        6.0,
+                        1.01,
+                        10.0
+                    ]
+                }
+            },
+            "children": [
+                {
+                    "name": "AxleCube2",
+                    "from": [
+                        0.01,
+                        -1.0,
+                        1.0
+                    ],
+                    "to": [
+                        1.0,
+                        3.0,
+                        3.0
+                    ],
+                    "rotationOrigin": [
+                        0.0,
+                        -23.0,
+                        -6.0
+                    ],
+                    "faces": {
+                        "north": {
+                            "texture": "#wood",
+                            "uv": [
+                                0.01,
+                                7.0,
+                                1.0,
+                                11.0
+                            ]
+                        },
+                        "south": {
+                            "texture": "#wood",
+                            "uv": [
+                                0.01,
+                                7.0,
+                                1.0,
+                                11.0
+                            ]
+                        },
+                        "east": {
+                            "texture": "#wood",
+                            "uv": [
+                                1.0,
+                                7.0,
+                                3.0,
+                                11.0
+                            ]
+                        },
+                        "west": {
+                            "texture": "#wood",
+                            "uv": [
+                                1.0,
+                                7.0,
+                                3.0,
+                                11.0
+                            ]
+                        },
+                        "up": {
+                            "texture": "#wood",
+                            "uv": [
+                                0.01,
+                                1.0,
+                                1.0,
+                                3.0
+                            ]
+                        },
+                        "down": {
+                            "texture": "#wood",
+                            "uv": [
+                                0.01,
+                                1.0,
+                                1.0,
+                                3.0
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "CrankshaftL",
+                    "from": [
+                        1.0,
+                        0.5,
+                        1.5
+                    ],
+                    "to": [
+                        2.5,
+                        1.5,
+                        2.5
+                    ],
+                    "rotationOrigin": [
+                        1.0,
+                        0.0,
+                        1.0
+                    ],
+                    "faces": {
+                        "north": {
+                            "texture": "#wood",
+                            "uv": [
+                                1.0,
+                                0.5,
+                                2.5,
+                                1.5
+                            ]
+                        },
+                        "south": {
+                            "texture": "#wood",
+                            "uv": [
+                                1.0,
+                                0.5,
+                                2.5,
+                                1.5
+                            ]
+                        },
+                        "up": {
+                            "texture": "#wood",
+                            "uv": [
+                                1.0,
+                                1.5,
+                                2.5,
+                                2.5
+                            ]
+                        },
+                        "down": {
+                            "texture": "#wood",
+                            "uv": [
+                                1.0,
+                                1.5,
+                                2.5,
+                                2.5
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Crankshaft2",
+                    "from": [
+                        2.5,
+                        0.5,
+                        1.5
+                    ],
+                    "to": [
+                        3.5,
+                        3.0,
+                        2.5
+                    ],
+                    "rotationOrigin": [
+                        2.0,
+                        0.0,
+                        1.0
+                    ],
+                    "faces": {
+                        "north": {
+                            "texture": "#wood",
+                            "uv": [
+                                2.5,
+                                0.5,
+                                3.5,
+                                3.0
+                            ]
+                        },
+                        "south": {
+                            "texture": "#wood",
+                            "uv": [
+                                2.5,
+                                0.5,
+                                3.5,
+                                3.0
+                            ]
+                        },
+                        "east": {
+                            "texture": "#wood",
+                            "uv": [
+                                1.5,
+                                0.5,
+                                2.5,
+                                3.0
+                            ]
+                        },
+                        "west": {
+                            "texture": "#wood",
+                            "uv": [
+                                1.5,
+                                0.5,
+                                2.5,
+                                3.0
+                            ]
+                        },
+                        "up": {
+                            "texture": "#wood",
+                            "uv": [
+                                2.5,
+                                1.5,
+                                3.5,
+                                2.5
+                            ]
+                        },
+                        "down": {
+                            "texture": "#wood",
+                            "uv": [
+                                2.5,
+                                1.5,
+                                3.5,
+                                2.5
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Crankshaft4",
+                    "from": [
+                        6.5,
+                        0.5,
+                        1.5
+                    ],
+                    "to": [
+                        7.5,
+                        3.0,
+                        2.5
+                    ],
+                    "rotationOrigin": [
+                        6.0,
+                        0.0,
+                        1.0
+                    ],
+                    "faces": {
+                        "north": {
+                            "texture": "#wood",
+                            "uv": [
+                                6.5,
+                                0.5,
+                                7.5,
+                                3.0
+                            ]
+                        },
+                        "south": {
+                            "texture": "#wood",
+                            "uv": [
+                                6.5,
+                                0.5,
+                                7.5,
+                                3.0
+                            ]
+                        },
+                        "east": {
+                            "texture": "#wood",
+                            "uv": [
+                                1.5,
+                                0.5,
+                                2.5,
+                                3.0
+                            ]
+                        },
+                        "west": {
+                            "texture": "#wood",
+                            "uv": [
+                                1.5,
+                                0.5,
+                                2.5,
+                                3.0
+                            ]
+                        },
+                        "up": {
+                            "texture": "#wood",
+                            "uv": [
+                                6.5,
+                                1.5,
+                                7.5,
+                                2.5
+                            ]
+                        },
+                        "down": {
+                            "texture": "#wood",
+                            "uv": [
+                                6.5,
+                                1.5,
+                                7.5,
+                                2.5
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Crankshaft6",
+                    "from": [
+                        8.5,
+                        0.5,
+                        1.5
+                    ],
+                    "to": [
+                        9.5,
+                        1.5,
+                        5.0
+                    ],
+                    "rotationOrigin": [
+                        8.0,
+                        0.0,
+                        1.0
+                    ],
+                    "faces": {
+                        "north": {
+                            "texture": "#wood",
+                            "uv": [
+                                8.5,
+                                0.5,
+                                9.5,
+                                1.5
+                            ]
+                        },
+                        "south": {
+                            "texture": "#wood",
+                            "uv": [
+                                8.5,
+                                0.5,
+                                9.5,
+                                1.5
+                            ]
+                        },
+                        "east": {
+                            "texture": "#wood",
+                            "uv": [
+                                1.5,
+                                0.5,
+                                5.0,
+                                1.5
+                            ]
+                        },
+                        "west": {
+                            "texture": "#wood",
+                            "uv": [
+                                1.5,
+                                0.5,
+                                5.0,
+                                1.5
+                            ]
+                        },
+                        "up": {
+                            "texture": "#wood",
+                            "uv": [
+                                8.5,
+                                1.5,
+                                9.5,
+                                5.0
+                            ]
+                        },
+                        "down": {
+                            "texture": "#wood",
+                            "uv": [
+                                8.5,
+                                1.5,
+                                9.5,
+                                5.0
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Crankshaft8",
+                    "from": [
+                        12.5,
+                        0.5,
+                        1.5
+                    ],
+                    "to": [
+                        13.5,
+                        1.5,
+                        5.0
+                    ],
+                    "rotationOrigin": [
+                        12.0,
+                        0.0,
+                        1.0
+                    ],
+                    "faces": {
+                        "north": {
+                            "texture": "#wood",
+                            "uv": [
+                                12.5,
+                                0.5,
+                                13.5,
+                                1.5
+                            ]
+                        },
+                        "south": {
+                            "texture": "#wood",
+                            "uv": [
+                                12.5,
+                                0.5,
+                                13.5,
+                                1.5
+                            ]
+                        },
+                        "east": {
+                            "texture": "#wood",
+                            "uv": [
+                                1.5,
+                                0.5,
+                                5.0,
+                                1.5
+                            ]
+                        },
+                        "west": {
+                            "texture": "#wood",
+                            "uv": [
+                                1.5,
+                                0.5,
+                                5.0,
+                                1.5
+                            ]
+                        },
+                        "up": {
+                            "texture": "#wood",
+                            "uv": [
+                                12.5,
+                                1.5,
+                                13.5,
+                                5.0
+                            ]
+                        },
+                        "down": {
+                            "texture": "#wood",
+                            "uv": [
+                                12.5,
+                                1.5,
+                                13.5,
+                                5.0
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Crankshaft3",
+                    "from": [
+                        3.5,
+                        2.0,
+                        1.5
+                    ],
+                    "to": [
+                        6.5,
+                        3.0,
+                        2.5
+                    ],
+                    "rotationOrigin": [
+                        3.0,
+                        1.0,
+                        1.0
+                    ],
+                    "faces": {
+                        "north": {
+                            "texture": "#wood",
+                            "uv": [
+                                3.5,
+                                2.0,
+                                6.5,
+                                3.0
+                            ]
+                        },
+                        "south": {
+                            "texture": "#wood",
+                            "uv": [
+                                3.5,
+                                2.0,
+                                6.5,
+                                3.0
+                            ]
+                        },
+                        "up": {
+                            "texture": "#wood",
+                            "uv": [
+                                3.5,
+                                1.5,
+                                6.5,
+                                2.5
+                            ]
+                        },
+                        "down": {
+                            "texture": "#wood",
+                            "uv": [
+                                3.5,
+                                1.5,
+                                6.5,
+                                2.5
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Crankshaft5",
+                    "from": [
+                        7.5,
+                        0.5,
+                        1.5
+                    ],
+                    "to": [
+                        8.5,
+                        1.5,
+                        2.5
+                    ],
+                    "rotationOrigin": [
+                        7.0,
+                        0.0,
+                        1.0
+                    ],
+                    "faces": {
+                        "north": {
+                            "texture": "#wood",
+                            "uv": [
+                                7.5,
+                                0.5,
+                                8.5,
+                                1.5
+                            ]
+                        },
+                        "south": {
+                            "texture": "#wood",
+                            "uv": [
+                                7.5,
+                                0.5,
+                                8.5,
+                                1.5
+                            ]
+                        },
+                        "up": {
+                            "texture": "#wood",
+                            "uv": [
+                                7.5,
+                                1.5,
+                                8.5,
+                                2.5
+                            ]
+                        },
+                        "down": {
+                            "texture": "#wood",
+                            "uv": [
+                                7.5,
+                                1.5,
+                                8.5,
+                                2.5
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Crankshaft9",
+                    "from": [
+                        13.5,
+                        0.5,
+                        1.5
+                    ],
+                    "to": [
+                        15.0,
+                        1.5,
+                        2.5
+                    ],
+                    "rotationOrigin": [
+                        13.0,
+                        0.0,
+                        1.0
+                    ],
+                    "faces": {
+                        "north": {
+                            "texture": "#wood",
+                            "uv": [
+                                13.5,
+                                0.5,
+                                15.0,
+                                1.5
+                            ]
+                        },
+                        "south": {
+                            "texture": "#wood",
+                            "uv": [
+                                13.5,
+                                0.5,
+                                15.0,
+                                1.5
+                            ]
+                        },
+                        "east": {
+                            "texture": "#wood",
+                            "uv": [
+                                1.5,
+                                0.5,
+                                2.5,
+                                1.5
+                            ]
+                        },
+                        "up": {
+                            "texture": "#wood",
+                            "uv": [
+                                13.5,
+                                1.5,
+                                15.0,
+                                2.5
+                            ]
+                        },
+                        "down": {
+                            "texture": "#wood",
+                            "uv": [
+                                13.5,
+                                1.5,
+                                15.0,
+                                2.5
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Crankshaft7",
+                    "from": [
+                        9.5,
+                        0.5,
+                        4.0
+                    ],
+                    "to": [
+                        12.5,
+                        1.5,
+                        5.0
+                    ],
+                    "rotationOrigin": [
+                        9.0,
+                        0.0,
+                        4.0
+                    ],
+                    "faces": {
+                        "north": {
+                            "texture": "#wood",
+                            "uv": [
+                                9.5,
+                                0.5,
+                                12.5,
+                                1.5
+                            ]
+                        },
+                        "south": {
+                            "texture": "#wood",
+                            "uv": [
+                                9.5,
+                                0.5,
+                                12.5,
+                                1.5
+                            ]
+                        },
+                        "up": {
+                            "texture": "#wood",
+                            "uv": [
+                                9.5,
+                                4.0,
+                                12.5,
+                                5.0
+                            ]
+                        },
+                        "down": {
+                            "texture": "#wood",
+                            "uv": [
+                                9.5,
+                                4.0,
+                                12.5,
+                                5.0
+                            ]
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}
