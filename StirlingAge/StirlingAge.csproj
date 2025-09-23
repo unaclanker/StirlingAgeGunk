@@ -2,8 +2,10 @@
   <!-- thank you, @copygirl! -->
   <PropertyGroup>
     <OutputType>Library</OutputType>
-    <TargetFramework>net7.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
+    <LangVersion>12</LangVersion>
     <OutputPath>bin</OutputPath>
+    <Version>1.21.0</Version>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="VintagestoryAPI">
@@ -25,6 +27,6 @@
     </Content>
   </ItemGroup>
   <Target Name="Package" AfterTargets="PostBuildEvent" Condition="'$(Configuration)' == 'Release'">
-    <ZipDirectory DestinationFile="bin/$(TargetName).zip" SourceDirectory="$(TargetDir)" Overwrite="true" />
+    <ZipDirectory DestinationFile="bin/$(TargetName)-$(Version).zip" SourceDirectory="$(TargetDir)" Overwrite="true" />
   </Target>
 </Project>
