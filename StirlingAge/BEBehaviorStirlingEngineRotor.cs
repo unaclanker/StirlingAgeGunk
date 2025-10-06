@@ -11,7 +11,7 @@ public class BEBehaviorStirlingEngineRotor : BEBehaviorMPRotor {
     float target_torque;
 
     const float BASIS_TEMP = 700.0f;
-    const float ΤORQUE_AT_BASIS_TEMP = 0.25f;
+    const float ΤORQUE_AT_BASIS_TEMP = 0.03f; // absoultely mauling the torque. was 0.25
 
     protected override float Resistance => 0.002f;
     protected override double AccelerationFactor => 0.05d;
